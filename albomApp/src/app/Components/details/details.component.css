@@ -1,0 +1,27 @@
+
+.details-continer {
+    display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 22vh;
+  }
+
+  .details-items{
+    background-color: white;
+    padding: 1.5em;
+    border: 1px solid blue;
+    border-radius: 10px;
+  }
+
+  .details-btn{
+      position: relative;
+      left: 8vh;
+  }
+
+  .details-btn button:hover{
+      cursor: pointer;
+
+}

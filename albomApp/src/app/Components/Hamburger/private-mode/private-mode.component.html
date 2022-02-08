@@ -1,0 +1,20 @@
+
+<section class="private-continer">
+  <div class="private-items">
+    <div class="private-title">enter password</div>
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" #password>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+    </div>
+    <div class="private-btns">
+      <button (click)='checkPassword(password.value)' >Enter</button>
+      <button routerLink="/photo-albom">Back To Main Page</button>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,18 @@
+<h2>your Categories:</h2>
+<br />
+<div *ngIf="allCategories">
+  <div *ngFor="let item of allCategories">
+    <div>{{ item }}</div>
+  </div>
+</div>
+
+<input placeholder="delte/add category" #category/>
+<div>
+    <button (click)="AddCategory(category.value)">
+        Add Category
+    </button>
+    <button (click)="deleteCategory(category.value)">
+        Delete Category
+    </button >
+
+</div>

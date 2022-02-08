@@ -1,0 +1,10 @@
+
+
+<h2 class="w3-center">Manual Slideshow</h2>
+<br/>
+<div class="w3-content w3-display-container container" *ngIf="allPhotos && allPhotos.length > 0">
+    <img [src]="allPhotos[slideIndex].url" class="child"  />
+
+  <button class="w3-button w3-black w3-display-left arrow" (click)="plusDivs(-1)" >&#10094;</button>
+  <button class="w3-button w3-black w3-display-right arrow" (click)="plusDivs(1)" >&#10095;</button>
+</div>

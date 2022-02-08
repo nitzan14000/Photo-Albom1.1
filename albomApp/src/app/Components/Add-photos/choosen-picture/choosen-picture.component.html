@@ -1,0 +1,9 @@
+
+<app-camera (getPicture)="handleImage($event)">
+
+</app-camera>
+<div class="webcam-image" *ngIf="webcamImage">
+    <img [src]="webcamImage.imageAsDataUrl" [height]="300" [width]="400" />
+  </div>
+
+  <button (click)='saveChoosenPicture()'>Save</button>

@@ -1,0 +1,21 @@
+
+<section class="aprrove-continer">
+    <div class="aprrove-items">
+
+        <ul>
+            <li>
+                <mat-checkbox class="aprrove-chack" (change)="checkCheckBoxvalue($event)">allow device camera</mat-checkbox>
+            </li>
+        <li>
+            <mat-checkbox class="aprrove-chack" (change)="checkCheckBoxvalue1($event)">allow device location</mat-checkbox>
+        </li>
+        <li>
+            <mat-checkbox class="aprrove-chack" (change)="checkCheckBoxvalue2($event)">allow private mode</mat-checkbox>
+        </li>
+    </ul>
+    </div>
+    <div>
+        <button class="aprrove-btn" routerLink ='/details' [disabled]="aproved  ? false : true" >Next</button>
+    </div>
+</section>
+

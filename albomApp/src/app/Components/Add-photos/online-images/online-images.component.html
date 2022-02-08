@@ -1,0 +1,22 @@
+
+<ul>
+    <li *ngFor='let item of showPictures'>
+        <div class="user-item" >
+            <div>
+                <img [src]="item"/>
+            </div>
+            <button (click)="upload(item)">upload</button> 
+        </div>
+        <br/>
+    </li>
+</ul>
+
+
+<div>
+    <input #onlineImage type="text" placeholder="image from the internet" (change)="searchPictures($event)"/>
+</div>
+
+
+<div>
+    <button >Save </button>
+</div>

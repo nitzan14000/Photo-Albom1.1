@@ -1,0 +1,50 @@
+
+<p >
+    <mat-toolbar class="layout-top">
+      <button mat-icon-button color="primary" [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <div >
+          <button mat-menu-item *ngIf="ser.privateModeModel"  routerLink="/photo-albom" mat-button (click)="openDialog()">
+            Enter/exit private mode
+          </button>
+          <button mat-menu-item *ngIf="!ser.privateModeModel" routerLink="/private-mode">
+            Enter/exit private mode
+          </button>
+        </div>
+        <button mat-menu-item routerLink="/edit-categories">Edit categories</button>
+        <button mat-menu-item routerLink="/about">About</button>
+        <button mat-menu-item routerLink="/">Exit application</button>
+      </mat-menu>
+      <span *ngIf="ser.privateModeModel" >you are in private mode</span>
+      <span class="example-spacer"></span>
+      <span>My App</span>
+
+
+      <button mat-icon-button [matMenuTriggerFor]="beforeMenu" class="material-icons">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <button mat-menu-item (click)="showAllPhotos()" routerLink="/photo-albom">Show images on list/table</button>
+        <button mat-menu-item routerLink="/slide-show">Start random slideshow</button>
+        <button mat-menu-item routerLink="/images">Swich mode to import / observe images</button>
+        <button mat-menu-item disabled="true">Share images</button>
+        <button mat-menu-item disabled="true">Sync with Cloud storage</button>
+      </mat-menu>
+    </mat-toolbar>
+
+  </p>
+  
+  
+    <div>
+      <div *ngIf="ser.privateModeModel">
+        <mat-icon class="place"   routerLink="/photo-albom" mat-button (click)="openDialog()">lock
+        </mat-icon>
+      </div>
+      <div *ngIf="!ser.privateModeModel">
+        <mat-icon class="place"   routerLink="/private-mode" mat-button>lock
+        </mat-icon>
+      </div>
+    </div>
+  

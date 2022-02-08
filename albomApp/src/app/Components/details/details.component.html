@@ -1,0 +1,31 @@
+<section class="details-continer">
+  <div class="details-items">
+    <form class="example-form">
+      <div>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Library Name</mat-label>
+          <input matInput value="nitzan albom" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Descrition</mat-label>
+          <input matInput value="kings albom" />
+        </mat-form-field>
+      </div>
+    </form>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Default View template</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let view of views" [value]="view.name">
+          {{ view.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="details-btn">
+      <button routerLink="/images">Next</button>
+    </div>
+  </div>
+</section>

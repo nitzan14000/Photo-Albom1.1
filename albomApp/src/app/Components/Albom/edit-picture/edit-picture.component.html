@@ -1,0 +1,54 @@
+<section class="edit-continer">
+  <div class="edit-items">
+
+    <input
+      class="edit-name"
+      type="text"
+      placeholder="Title"
+      [value]="picture.title"
+      (change)="updateTitle($event)"
+    />
+
+
+    <img [src]="picture.url" class="edit-img" />
+
+
+    <div class="edit-map">
+      <app-google-map  (newItemEvent)="chagngeLocation1($event)">
+      </app-google-map>
+    </div>
+
+    <!-- <input
+      type="text"
+      placeholder="location"
+      [value]="picture.location"
+      (change)="chagngeLocation2($event)"
+    /> -->
+
+    <section class="edit-options">
+      <select class="edit-cat" required type="text" id="#" (change)="changeCategory($event)">
+        <option selected="selected" *ngFor="let item of options" [value]="item">
+          {{ item }}
+        </option>
+      </select>
+  
+      <div class="edit-favo">
+        <mat-checkbox name="Favorite" [value]="picture.favorite" (click)="n(2)"
+          >Favorite</mat-checkbox
+        >
+      </div>
+  
+      <div class="edit-private">
+        <mat-checkbox name="Private" [value]="picture.privateMood" (click)="n(1)"
+          >Private Mode</mat-checkbox
+        >
+      </div>
+    </section>
+
+
+    <section class="edit-btns">
+      <button (click)="saveEditPicture()">Save</button>
+      <button routerLink="/photo-albom">Return To Galery</button>
+    </section>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+img {
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  /* position: relative; */
+  align-items: center;
+}
+
+.child {
+  width: 400px;
+  height: 500px;
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 50%;
+  margin: -25px 0 0 -25px; /* apply negative top and left margins to truly center the element */
+}
+
+.w3-black, .w3-hover-black:hover {
+    color: #ffeb3be3!important;
+    background-color: #9e9e9e!important;
+}
+
+.arrow{
+    display: flex;
+   flex-direction: column;
+    flex:1;
+    min-height: 5vh;
+}

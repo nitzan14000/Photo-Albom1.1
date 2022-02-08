@@ -1,0 +1,29 @@
+
+.aprrove-continer {
+  display: inline-block;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+top: 22vh;
+}
+
+.aprrove-items{
+  background-color: white;
+  padding: 1.5em;
+  border: 1px solid blue;
+  border-radius: 10px;
+}
+
+.aprrove-items ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.aprrove-btn{
+  margin-top: 5em;
+}
+
+  

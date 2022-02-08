@@ -1,0 +1,56 @@
+
+
+<div>
+  <form class="example-form">
+    <div class="text">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput value="" #name placeholder="Search By Name"  />
+        <mat-icon matSuffix (click)="searchByName(name.value)" class="search">search</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="text">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput value="" #category placeholder="By Category" />
+        <mat-icon matSuffix (click)="searchByCategory(category.value)" class="search">search</mat-icon>
+      </mat-form-field>
+    </div>
+  </form>
+
+  <ul *ngIf="allPhotos">
+    <li *ngFor="let item of allPhotos">
+      <img [src]="item.url" class="tn" width="200" height="160" (click)="clickedPhoto(item)" routerLink="/edit-picture"/>
+    </li>
+  </ul>
+</div>
+
+<!-- <img [src]="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXqbt205G9lP8Ujv-kcBk89tSDNKTlURuYcQ&usqp=CAU" class="tn" width="200" height="160"  routerLink="/edit-picture"/> -->
+
+
+<!-- <div>
+  <mat-grid-list cols="1" rowHeight="3:2" >
+    <mat-grid-tile>
+      <form class="example-form">
+        <div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <input matInput value="" #name placeholder='Search By Name'/>
+            <mat-icon matSuffix (click) ='searchByName(name.value)'>search</mat-icon>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <input matInput value="" placeholder='By Category'/>
+            <mat-icon matSuffix>search</mat-icon>
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-grid-tile>
+
+    <mat-grid-tile row="3">
+      <ul *ngIf='allPhotos' >
+        <li *ngFor='let item of allPhotos'>
+          <img [src]='item.url' class="tn" width="200" height="160"/>
+        </li>
+      </ul>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div> -->
